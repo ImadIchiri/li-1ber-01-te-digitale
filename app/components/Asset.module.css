@@ -1,6 +1,12 @@
 .asset {
     padding: var(--section-padding);
     background: var(--charcoal);
+    position: relative;
+    /* Grid Pattern */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
 }
 
 .header {
@@ -13,7 +19,7 @@
 }
 
 .subtitle {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.05rem;
     max-width: 600px;
     margin: 0 auto;
@@ -43,9 +49,22 @@
 }
 
 .icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    color: var(--white);
+    /* Fallback */
+}
+
+/* Ensure SVGs are sized correctly if not hardcoded, though we set 48x48 in SVG props */
+.icon svg {
+    /* Optional: can add transition or hover effects specific to SVG paths here */
+    transition: transform var(--transition-base);
+}
+
+.card:hover .icon svg {
+    transform: scale(1.1);
 }
 
 .cardTitle {

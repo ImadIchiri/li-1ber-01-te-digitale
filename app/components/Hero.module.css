@@ -7,7 +7,17 @@
     background: var(--charcoal);
     position: relative;
     overflow: hidden;
-    padding: 120px 24px 80px;
+    padding: var(--section-padding);
+    padding-top: 140px;
+    /* Extra top padding for visually centered hero content if needed, but var(--section-padding) is 120px which is good. Let's stick to var for mobile consistency */
+    padding: 140px 24px 100px;
+    /* Keeping custom for visual balance but aligned with standard */
+
+    /* Grid Pattern */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
 }
 
 .hero::before {
@@ -75,11 +85,13 @@
 }
 
 .subtitle {
-    font-size: clamp(1rem, 1.8vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.65);
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    /* Slightly tuned */
+    color: rgba(255, 255, 255, 0.7);
+    /* Improved contrast from 0.65 */
     max-width: 600px;
     margin: 0 auto 48px;
-    line-height: 1.8;
+    /* line-height inherited */
 }
 
 .ctaGroup {

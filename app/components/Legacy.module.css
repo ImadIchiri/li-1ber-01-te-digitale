@@ -1,12 +1,28 @@
 .legacy {
     padding: var(--section-padding);
     background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.legacy::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(197, 160, 89, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .inner {
     max-width: 720px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .title {
@@ -23,8 +39,8 @@
 
 .text {
     font-size: 1.05rem;
-    color: rgba(26, 26, 26, 0.75);
-    line-height: 1.9;
+    color: rgba(26, 26, 26, 0.7);
+    /* line-height inherited from global p */
 }
 
 .highlight {

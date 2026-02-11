@@ -2,6 +2,7 @@
 
 import styles from "./Asset.module.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import { IconSEO, IconBrand, IconMarket } from "./AssetIcons";
 
 export default function Asset({ dict }) {
     const t = dict || {};
@@ -32,12 +33,6 @@ function AssetCard({ item, index }) {
 
     return (
         <div ref={ref} className={`${styles.card} ${delayClass}`}>
-            {/* 
-        Ideally, icons should be passed in JSON or mapped here. 
-        For simplicity, we'll map based on index if the JSON doesn't contain the icon string directly.
-        But JSON usually doesn't store JSX/Components. 
-        Since the order is fixed (SEO, Brandability, Market Fit), we can use a helper array for icons.
-      */}
             <span className={styles.icon}>{getIcon(index)}</span>
             <h3 className={styles.cardTitle}>{item.title}</h3>
             <p className={styles.cardText}>{item.text}</p>
@@ -46,6 +41,6 @@ function AssetCard({ item, index }) {
 }
 
 function getIcon(index) {
-    const icons = ["🔍", "✦", "📈"];
-    return icons[index] || "•";
+    const icons = [<IconSEO key="seo" />, <IconBrand key="brand" />, <IconMarket key="market" />];
+    return icons[index] || null;
 }

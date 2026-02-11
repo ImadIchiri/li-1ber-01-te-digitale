@@ -2,6 +2,7 @@
 
 import styles from "./Profiles.module.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import { IconLearning, IconCoach, IconAgency, IconStartup } from "./ProfilesIcons";
 
 export default function Profiles({ dict }) {
     const t = dict || {};
@@ -39,6 +40,6 @@ function ProfileCard({ profile, index }) {
 }
 
 function getIcon(index) {
-    const icons = ["🎓", "🎯", "🚀", "💡"];
-    return icons[index] || "•";
+    const icons = [<IconLearning key="learn" />, <IconCoach key="coach" />, <IconAgency key="agency" />, <IconStartup key="startup" />];
+    return icons[index] || null;
 }
