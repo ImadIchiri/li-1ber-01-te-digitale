@@ -1,0 +1,90 @@
+.metrics {
+    padding: var(--section-padding);
+    background: var(--white);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.05);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.title {
+    color: var(--charcoal);
+}
+
+.subtitle {
+    color: rgba(26, 26, 26, 0.6);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.metricCard {
+    text-align: center;
+    padding: 32px 24px;
+    border-radius: 8px;
+    background: var(--white-off);
+    border: 1px solid transparent;
+    transition: all var(--transition-base);
+}
+
+.metricCard:hover {
+    border-color: var(--gold);
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.1);
+    transform: translateY(-4px);
+}
+
+.value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: rgba(26, 26, 26, 0.6);
+    line-height: 1.6;
+}
+
+.source {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 0.85rem;
+    color: rgba(26, 26, 26, 0.4);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .metrics {
+        padding: var(--section-padding-mobile);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

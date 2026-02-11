@@ -1,0 +1,72 @@
+.profiles {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.title {
+    color: var(--charcoal);
+}
+
+.subtitle {
+    color: rgba(26, 26, 26, 0.6);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 36px 32px;
+    border: 1px solid rgba(26, 26, 26, 0.08);
+    border-radius: 12px;
+    background: var(--white-off);
+    transition: all var(--transition-base);
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(197, 160, 89, 0.12);
+}
+
+.icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.cardTitle {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.cardText {
+    color: rgba(26, 26, 26, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .profiles {
+        padding: var(--section-padding-mobile);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

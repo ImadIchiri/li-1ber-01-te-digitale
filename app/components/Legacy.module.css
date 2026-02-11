@@ -1,0 +1,39 @@
+.legacy {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    color: var(--charcoal);
+}
+
+.rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    border: none;
+    margin: 2rem auto;
+}
+
+.text {
+    font-size: 1.05rem;
+    color: rgba(26, 26, 26, 0.75);
+    line-height: 1.9;
+}
+
+.highlight {
+    color: var(--gold-dark);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .legacy {
+        padding: var(--section-padding-mobile);
+    }
+}

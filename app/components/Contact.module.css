@@ -1,0 +1,159 @@
+.contact {
+    padding: var(--section-padding);
+    background: var(--charcoal);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.title {
+    color: var(--white);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 960px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--charcoal-light);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    border-radius: 6px;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-base);
+    outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: var(--gold);
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit {
+    composes: btn-primary from global;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+/* Direct Buy */
+.directBuy {
+    background: var(--charcoal-light);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.directBuyTitle {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.directBuyText {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.directBuyLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 36px;
+    background: transparent;
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+.directBuyLink:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+}
+
+.or {
+    display: block;
+    margin: 20px 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.emailLink {
+    color: var(--gold);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: var(--section-padding-mobile);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

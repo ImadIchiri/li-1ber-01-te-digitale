@@ -1,0 +1,36 @@
+.footer {
+    padding: 32px 0;
+    background: var(--charcoal-dark);
+    border-top: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logoAccent {
+    color: var(--gold);
+}
+
+.copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
