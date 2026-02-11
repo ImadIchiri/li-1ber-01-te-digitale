@@ -17,7 +17,7 @@ function getLocale(request) {
     return defaultLocale
 }
 
-export function middleware(request) {
+export function proxy(request) {
     // Check if there is any supported locale in the pathname
     const { pathname } = request.nextUrl
     const pathnameHasLocale = locales.some(
@@ -30,7 +30,7 @@ export function middleware(request) {
     const locale = getLocale(request)
     request.nextUrl.pathname = `/${locale}${pathname}`
     // e.g. incoming request is /products
-    // The new URL is now /en-US/products
+    // The new URL is now /fr/products
     return NextResponse.redirect(request.nextUrl)
 }
 
