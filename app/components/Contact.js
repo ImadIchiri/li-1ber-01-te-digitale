@@ -4,7 +4,11 @@ import { useState } from "react";
 import styles from "./Contact.module.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
-export default function Contact() {
+export default function Contact({ dict }) {
+    const t = dict || {};
+    const tf = t.form || {};
+    const tdb = t.direct_buy || {};
+
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [status, setStatus] = useState("idle"); // idle, submitting, success, error
 
@@ -32,7 +36,7 @@ export default function Contact() {
                     email: formData.email,
                     message: formData.message,
                     _subject: `New Inquiry from ${formData.name}`,
-                    _template: "table", // optional: prettier email format
+                    _template: "table",
                 }),
             });
 
@@ -52,25 +56,23 @@ export default function Contact() {
         <section id="contact" className={styles.contact}>
             <div className="container">
                 <div ref={headerRef} className={styles.header}>
-                    <span className="overline">The Close</span>
-                    <h2 className={styles.title}>Ready to Own This Domain?</h2>
-                    <p className={styles.subtitle}>
-                        Whether you&apos;re exploring or ready to commit — let&apos;s start the conversation.
-                    </p>
+                    <span className="overline">{t.overline}</span>
+                    <h2 className={styles.title}>{t.title}</h2>
+                    <p className={styles.subtitle}>{t.subtitle}</p>
                 </div>
                 <div className={styles.grid}>
                     {/* Contact Form */}
                     <form ref={formRef} className={`${styles.form} delay-100`} onSubmit={handleSubmit}>
                         <div className={styles.inputGroup}>
                             <label htmlFor="name" className={styles.label}>
-                                Full Name
+                                {tf.name_label}
                             </label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
                                 className={styles.input}
-                                placeholder="John Doe"
+                                placeholder={tf.name_placeholder}
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
@@ -79,14 +81,14 @@ export default function Contact() {
                         </div>
                         <div className={styles.inputGroup}>
                             <label htmlFor="email" className={styles.label}>
-                                Email Address
+                                {tf.email_label}
                             </label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 className={styles.input}
-                                placeholder="john@company.com"
+                                placeholder={tf.email_placeholder}
                                 required
                                 value={formData.email}
                                 onChange={handleChange}
@@ -95,13 +97,13 @@ export default function Contact() {
                         </div>
                         <div className={styles.inputGroup}>
                             <label htmlFor="message" className={styles.label}>
-                                Message
+                                {tf.message_label}
                             </label>
                             <textarea
                                 id="message"
                                 name="message"
                                 className={styles.textarea}
-                                placeholder="I'm interested in acquiring LiberteDigitale.com..."
+                                placeholder={tf.message_placeholder}
                                 required
                                 value={formData.message}
                                 onChange={handleChange}
@@ -114,40 +116,37 @@ export default function Contact() {
                             className={styles.submit}
                             disabled={status === "submitting" || status === "success"}
                         >
-                            {status === "submitting" ? "Sending..." :
-                                status === "success" ? "Message Sent Successfully ✓" :
-                                    "Send Inquiry →"}
+                            {status === "submitting" ? tf.submit_sending :
+                                status === "success" ? tf.submit_success :
+                                    tf.submit_idle}
                         </button>
 
                         {status === "error" && (
                             <p style={{ color: "red", fontSize: "0.9rem", marginTop: "10px", textAlign: "center" }}>
-                                Something went wrong. Please try again or email directly.
+                                {tf.error}
                             </p>
                         )}
 
                         {status === "success" && (
                             <p style={{ color: "var(--gold)", fontSize: "0.9rem", marginTop: "10px", textAlign: "center" }}>
-                                Thank you! We&apos;ll be in touch shortly.
+                                {tf.success_message}
                             </p>
                         )}
                     </form>
 
                     {/* Direct Buy */}
                     <div ref={directBuyRef} className={`${styles.directBuy} delay-200`}>
-                        <h3 className={styles.directBuyTitle}>Prefer a Direct Transaction?</h3>
-                        <p className={styles.directBuyText}>
-                            Skip the back-and-forth. Use a trusted escrow service for a
-                            seamless, secure acquisition.
-                        </p>
+                        <h3 className={styles.directBuyTitle}>{tdb.title}</h3>
+                        <p className={styles.directBuyText}>{tdb.text}</p>
                         <a
                             href="http://libertedigitale.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.directBuyLink}
                         >
-                            Buy on Dynadot.com →
+                            {tdb.button}
                         </a>
-                        <span className={styles.or}>or</span>
+                        <span className={styles.or}>{tdb.or}</span>
                         <a
                             href="mailto:contact@libertedigitale.com"
                             className={styles.emailLink}

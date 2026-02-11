@@ -4,16 +4,18 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
 
-const navLinks = [
-    { label: "The Legacy", href: "#legacy" },
-    { label: "The Asset", href: "#asset" },
-    { label: "The Package", href: "#package" },
-    { label: "Profiles", href: "#profiles" },
-];
-
-export default function Header() {
+export default function Header({ dict, lang }) {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    // Fallback if dict is missing (e.g. during dev transitions)
+    const t = dict || { nav: {}, contact: "Inquire Now" };
+    const navLinks = [
+        { label: t.legacy || "The Legacy", href: "#legacy" },
+        { label: t.asset || "The Asset", href: "#asset" },
+        { label: t.package || "The Package", href: "#package" },
+        { label: t.profiles || "Profiles", href: "#profiles" },
+    ];
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 40);
@@ -30,6 +32,16 @@ export default function Header() {
     }, [menuOpen]);
 
     const handleLinkClick = () => setMenuOpen(false);
+
+    // Language Switcher Logic
+    const toggleLang = lang === "en" ? "fr" : "en";
+    const toggleLabel = lang === "en" ? "FR" : "EN";
+
+    const handleLangSwitch = (e) => {
+        e.preventDefault();
+        const hash = window.location.hash || "";
+        window.location.href = `/${toggleLang}${hash}`;
+    };
 
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -60,23 +72,32 @@ export default function Header() {
                             </li>
                         ))}
                         <li>
+                            <a href={`/${toggleLang}`} onClick={handleLangSwitch} className={styles.navLink} style={{ fontWeight: 'bold' }}>
+                                {toggleLabel}
+                            </a>
+                        </li>
+                        <li>
                             <a href="#contact" className={`${styles.navLink} ${styles.navCta}`}>
-                                Inquire Now
+                                {t.contact}
                             </a>
                         </li>
                     </ul>
                 </nav>
 
-                {/* Mobile Hamburger */}
-                <button
-                    className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle navigation menu"
-                >
-                    <span />
-                    <span />
-                    <span />
-                </button>
+                {/* Mobile Hamburger */}<div className={styles.mobileRight} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <a href={`/${toggleLang}`} onClick={handleLangSwitch} className={styles.mobileLangLink} style={{ color: 'var(--white)', fontWeight: 'bold', textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+                        {toggleLabel}
+                    </a>
+                    <button
+                        className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label="Toggle navigation menu"
+                    >
+                        <span />
+                        <span />
+                        <span />
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Overlay */}
@@ -92,7 +113,7 @@ export default function Header() {
                     </a>
                 ))}
                 <a href="#contact" className={styles.mobileCta} onClick={handleLinkClick}>
-                    Inquire Now
+                    {t.contact}
                 </a>
             </div>
         </header>

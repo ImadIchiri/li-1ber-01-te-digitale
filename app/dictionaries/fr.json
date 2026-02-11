@@ -1,0 +1,138 @@
+{
+    "header": {
+        "legacy": "L'Héritage",
+        "asset": "L'Atout",
+        "package": "Le Package",
+        "profiles": "Profils",
+        "contact": "Faire une Offre"
+    },
+    "hero": {
+        "domain": "LiberteDigitale.com",
+        "title": "Possédez l'Avenir de la Liberté Digitale",
+        "subtitle": "Un domaine premium conçu pour la prochaine ère de l'éducation en ligne, du coaching et de l'émancipation numérique — prêt pour votre vision.",
+        "cta_primary": "Faire une Offre →",
+        "cta_secondary": "Découvrir l'Atout"
+    },
+    "legacy": {
+        "overline": "L'Héritage",
+        "title": "Construit avec Intention. Prêt pour son Prochain Chapitre.",
+        "p1": "Liberté Digitale est né début 2025 avec une mission claire : construire une <highlight>plateforme numérique pour la liberté</highlight> — la liberté d'apprendre, d'enseigner et de grandir sans limites.",
+        "p2": "Durant 18 mois de développement dédié, nous avons créé une identité de marque, sécurisé des handles sociaux premium et posé les fondations d'une plateforme qui résonne avec la demande croissante pour l'éducation en ligne et le coaching.",
+        "p3": "Alors que l'équipe fondatrice pivote vers une nouvelle aventure, cet actif numérique soigneusement construit est maintenant disponible à l'acquisition — vous offrant une <highlight>avance que l'argent seul ne peut acheter</highlight>."
+    },
+    "asset": {
+        "overline": "L'Atout",
+        "title": "Pourquoi Ce Domaine ?",
+        "subtitle": "Une combinaison rare de sens, de mémorabilité et de timing marché.",
+        "cards": [
+            {
+                "title": "Puissance SEO",
+                "text": "Un domaine propre et riche en mots-clés qui signale l'autorité dans l'espace de l'éducation numérique et de la freedom-tech. Historique impeccable, prêt pour l'indexation."
+            },
+            {
+                "title": "Brandabilité",
+                "text": "\"Liberté Digitale\" évoque la confiance, l'aspiration et la modernité. C'est mémorable, multilingue et construit pour une audience globale."
+            },
+            {
+                "title": "Fit Marché",
+                "text": "Le marché du e-learning devrait dépasser 400Mds$ d'ici 2027. Ce domaine est positionné exactement à l'intersection de l'éducation et de l'émancipation numérique."
+            }
+        ]
+    },
+    "metrics": {
+        "overline": "Les Chiffres",
+        "title": "Métriques SEO & Acquisition",
+        "subtitle": "Preuve de potentiel basée sur les données. Ce domaine est déjà positionné pour capter un trafic précieux.",
+        "source": "Source des données : Ubersuggest / Google Ads Keyword Planner.",
+        "cards": [
+            {
+                "value": "1k - 10k",
+                "label": "Volume de Recherche Mensuel",
+                "description": "Ciblage de clusters à haute valeur autour de 'Liberté' + 'Digitale' et mots-clés freedom-tech associés."
+            },
+            {
+                "value": "1,17$ - 1,76$",
+                "label": "Intention Commerciale (CPC)",
+                "description": "Une forte concurrence des annonceurs indique une haute valeur commerciale dans cette niche."
+            },
+            {
+                "value": "Haute Intention",
+                "label": "Valeur Marché",
+                "description": "Trafic qualifié provenant de l'économie numérique francophone et des digital nomads."
+            }
+        ]
+    },
+    "package": {
+        "overline": "Le Package",
+        "title": "Tout Ce Dont Vous Avez Besoin pour Lancer",
+        "subtitle": "Ce n'est pas juste un domaine — c'est une fondation de marque complète.",
+        "items": [
+            {
+                "title": "Domaine Premium",
+                "text": "LiberteDigitale.com — historique propre, zéro pénalité, prêt pour un déploiement instantané."
+            },
+            {
+                "title": "Branding Premium",
+                "text": "LibertéDigitale.com est un nom à fort taux de rappel, phonétiquement équilibré, qui impose l'autorité sur les marchés francophones et internationaux du e-learning/commerce."
+            },
+            {
+                "title": "Positionnement Marché",
+                "text": "Parfaitement positionné pour les secteurs E-learning et EdTech (300Mds$+). Les mots-clés 'Liberté' et 'Digitale' touchent aux aspirations les plus recherchées de l'économie moderne."
+            },
+            {
+                "title": "Autorité Instantanée",
+                "text": "Évitez la friction d'une 'nouvelle marque'. Ce domaine fournit la confiance instantanée nécessaire pour convertir des clients high-ticket et des entrepreneurs sérieux dès le premier jour."
+            }
+        ]
+    },
+    "profiles": {
+        "overline": "Profils Cibles",
+        "title": "Pour Qui Est Ce Domaine ?",
+        "subtitle": "Construit pour les visionnaires qui comprennent que le bon nom change tout.",
+        "cards": [
+            {
+                "title": "Plateformes E-Learning",
+                "text": "Le nom \"Liberté Digitale\" parle directement de liberté numérique par l'éducation — positionnement parfait pour les plateformes de cours, LMS et startups EdTech."
+            },
+            {
+                "title": "Coachs & Consultants En Ligne",
+                "text": "Un nom de marque premium et aspirationnel qui communique instantanément la transformation et l'émancipation — exactement ce que recherchent les clients de coaching."
+            },
+            {
+                "title": "Agences Digitales",
+                "text": "Pour les agences focalisées sur la transformation digitale, ce domaine transmet l'innovation, l'indépendance et une philosophie tournée vers l'avenir."
+            },
+            {
+                "title": "Startups & Marques",
+                "text": "Un nom unique et multilingue qui se démarque sur des marchés encombrés. Parfait pour toute startup construisant à l'intersection de la technologie et de la croissance personnelle."
+            }
+        ]
+    },
+    "contact": {
+        "overline": "Conclusion",
+        "title": "Prêt à Posséder Ce Domaine ?",
+        "subtitle": "Que vous exploriez ou soyez prêt à vous engager — commençons la conversation.",
+        "form": {
+            "name_label": "Nom Complet",
+            "name_placeholder": "Jean Dupont",
+            "email_label": "Adresse Email",
+            "email_placeholder": "jean@entreprise.com",
+            "message_label": "Message",
+            "message_placeholder": "Je suis intéressé par l'acquisition de LiberteDigitale.com...",
+            "submit_idle": "Envoyer la Demande →",
+            "submit_sending": "Envoi en cours...",
+            "submit_success": "Message Envoyé avec Succès ✓",
+            "error": "Une erreur est survenue. Veuillez réessayer ou envoyer un email direct.",
+            "success_message": "Merci ! Nous vous recontacterons sous peu."
+        },
+        "direct_buy": {
+            "title": "Préférez une Transaction Directe ?",
+            "text": "Évitez les allers-retours. Utilisez un service d'escrow de confiance pour une acquisition fluide et sécurisée.",
+            "button": "Acheter sur Dynadot.com →",
+            "or": "ou"
+        }
+    },
+    "footer": {
+        "rights": "Tous droits réservés."
+    }
+}

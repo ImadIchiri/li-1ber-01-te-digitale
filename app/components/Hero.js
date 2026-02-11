@@ -3,7 +3,8 @@
 import styles from "./Hero.module.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
-export default function Hero() {
+export default function Hero({ dict }) {
+    const t = dict || {}; // safe fallback
     const titleRef = useScrollAnimation("fade-in");
     const subRef = useScrollAnimation("slide-up");
     const ctaRef = useScrollAnimation("fade-in");
@@ -11,20 +12,19 @@ export default function Hero() {
     return (
         <section id="hero" className={styles.hero}>
             <div className={styles.content}>
-                <span className={styles.domainName}>LiberteDigitale.com</span>
+                <span className={styles.domainName}>{t.domain || "LiberteDigitale.com"}</span>
                 <h1 ref={titleRef} className={`${styles.title} delay-100`}>
-                    Own the Future of Digital Freedom
+                    {t.title}
                 </h1>
                 <p ref={subRef} className={`${styles.subtitle} delay-200`}>
-                    A premium domain crafted for the next era of online education,
-                    coaching, and digital empowerment — ready for your vision.
+                    {t.subtitle}
                 </p>
                 <div ref={ctaRef} className={`${styles.ctaGroup} delay-300`}>
                     <a href="#contact" className="btn-primary">
-                        Inquire Now →
+                        {t.cta_primary}
                     </a>
                     <a href="#asset" className="btn-secondary">
-                        Discover the Asset
+                        {t.cta_secondary}
                     </a>
                 </div>
             </div>

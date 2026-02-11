@@ -3,40 +3,21 @@
 import styles from "./Asset.module.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 
-const assets = [
-    {
-        icon: "🔍",
-        title: "SEO Power",
-        text: "A clean, keyword-rich domain that signals authority in the digital education and freedom-tech space. Zero spam history, ready for indexing.",
-    },
-    {
-        icon: "✦",
-        title: "Brandability",
-        text: '"Liberté Digitale" evokes trust, aspiration, and modernity. It\'s memorable, cross-lingual, and built for a global audience.',
-    },
-    {
-        icon: "📈",
-        title: "Market Fit",
-        text: "The e-learning market is projected to exceed $400B by 2027. This domain is positioned squarely at the intersection of education and digital empowerment.",
-    },
-];
-
-export default function Asset() {
+export default function Asset({ dict }) {
+    const t = dict || {};
     const headerRef = useScrollAnimation("fade-in");
 
     return (
         <section id="asset" className={styles.asset}>
             <div className="container">
                 <div ref={headerRef} className={styles.header}>
-                    <span className="overline">The Asset</span>
-                    <h2 className={styles.title}>Why This Domain?</h2>
-                    <p className={styles.subtitle}>
-                        A rare combination of meaning, memorability, and market timing.
-                    </p>
+                    <span className="overline">{t.overline}</span>
+                    <h2 className={styles.title}>{t.title}</h2>
+                    <p className={styles.subtitle}>{t.subtitle}</p>
                 </div>
                 <div className={styles.grid}>
-                    {assets.map((item, index) => (
-                        <AssetCard key={item.title} item={item} index={index} />
+                    {t.cards && t.cards.map((item, index) => (
+                        <AssetCard key={index} item={item} index={index} />
                     ))}
                 </div>
             </div>
@@ -51,9 +32,20 @@ function AssetCard({ item, index }) {
 
     return (
         <div ref={ref} className={`${styles.card} ${delayClass}`}>
-            <span className={styles.icon}>{item.icon}</span>
+            {/* 
+        Ideally, icons should be passed in JSON or mapped here. 
+        For simplicity, we'll map based on index if the JSON doesn't contain the icon string directly.
+        But JSON usually doesn't store JSX/Components. 
+        Since the order is fixed (SEO, Brandability, Market Fit), we can use a helper array for icons.
+      */}
+            <span className={styles.icon}>{getIcon(index)}</span>
             <h3 className={styles.cardTitle}>{item.title}</h3>
             <p className={styles.cardText}>{item.text}</p>
         </div>
     );
+}
+
+function getIcon(index) {
+    const icons = ["🔍", "✦", "📈"];
+    return icons[index] || "•";
 }

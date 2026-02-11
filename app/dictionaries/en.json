@@ -1,0 +1,138 @@
+{
+    "header": {
+        "legacy": "The Legacy",
+        "asset": "The Asset",
+        "package": "The Package",
+        "profiles": "Profiles",
+        "contact": "Inquire Now"
+    },
+    "hero": {
+        "domain": "LiberteDigitale.com",
+        "title": "Own the Future of Digital Freedom",
+        "subtitle": "A premium domain crafted for the next era of online education, coaching, and digital empowerment — ready for your vision.",
+        "cta_primary": "Inquire Now →",
+        "cta_secondary": "Discover the Asset"
+    },
+    "legacy": {
+        "overline": "The Legacy",
+        "title": "Built with Intention. Ready for Its Next Chapter.",
+        "p1": "Liberté Digitale was born in early 2025 with a clear mission: to build a <highlight>digital platform for freedom</highlight> — freedom to learn, to teach, and to grow without boundaries.",
+        "p2": "Over 18 months of dedicated development, we crafted a brand identity, secured premium social handles, and laid the foundation for a platform that resonates with the growing demand for online education and coaching.",
+        "p3": "As the founding team pivots toward a new venture, this carefully built digital asset is now available for acquisition — giving you a <highlight>head start that money alone can't buy</highlight>."
+    },
+    "asset": {
+        "overline": "The Asset",
+        "title": "Why This Domain?",
+        "subtitle": "A rare combination of meaning, memorability, and market timing.",
+        "cards": [
+            {
+                "title": "SEO Power",
+                "text": "A clean, keyword-rich domain that signals authority in the digital education and freedom-tech space. Zero spam history, ready for indexing."
+            },
+            {
+                "title": "Brandability",
+                "text": "\"Liberté Digitale\" evokes trust, aspiration, and modernity. It's memorable, cross-lingual, and built for a global audience."
+            },
+            {
+                "title": "Market Fit",
+                "text": "The e-learning market is projected to exceed $400B by 2027. This domain is positioned squarely at the intersection of education and digital empowerment."
+            }
+        ]
+    },
+    "metrics": {
+        "overline": "The Numbers",
+        "title": "SEO & Acquisition Metrics",
+        "subtitle": "Data-driven proof of potential. This domain is already positioned to capture valuable traffic.",
+        "source": "Data source: Ubersuggest / Google Ads Keyword Planner.",
+        "cards": [
+            {
+                "value": "1k - 10k",
+                "label": "Monthly Search Volume",
+                "description": "Targeting high-value clusters around 'Liberté' + 'Digitale' and related freedom-tech keywords."
+            },
+            {
+                "value": "$1.17 - $1.76",
+                "label": "Commercial Intent (CPC)",
+                "description": "Strong advertiser competition indicates high commercial value in this niche."
+            },
+            {
+                "value": "High Intent",
+                "label": "Market Value",
+                "description": "Qualified traffic from the French-speaking digital economy and global nomads."
+            }
+        ]
+    },
+    "package": {
+        "overline": "The Package",
+        "title": "Everything You Need to Launch",
+        "subtitle": "This isn't just a domain — it's a complete brand foundation.",
+        "items": [
+            {
+                "title": "Premium Domain",
+                "text": "LiberteDigitale.com — clean history, zero penalties, ready for instant deployment."
+            },
+            {
+                "title": "Premium Branding",
+                "text": "LibertéDigitale.com is a high-recall, phonetically balanced name that commands authority in the French-speaking and international e-(learning/commerce) markets."
+            },
+            {
+                "title": "Market Positioning",
+                "text": "Perfectly positioned for the $300B+ E-learning and EdTech sectors. The keywords 'Liberté' and 'Digitale' tap into the most searched aspirations in the modern economy."
+            },
+            {
+                "title": "Instant Authority",
+                "text": "Skip the 'new brand' friction. This domain provides the instant trust required to convert high-ticket clients and serious entrepreneurs from day one."
+            }
+        ]
+    },
+    "profiles": {
+        "overline": "Target Profiles",
+        "title": "Who Is This Domain For?",
+        "subtitle": "Built for visionaries who understand that the right name changes everything.",
+        "cards": [
+            {
+                "title": "E-Learning Platforms",
+                "text": "The name \"Liberté Digitale\" speaks directly to digital freedom through education — perfect positioning for course platforms, LMS providers, and EdTech startups."
+            },
+            {
+                "title": "Online Coaches & Consultants",
+                "text": "A premium, aspirational brand name that instantly communicates transformation and empowerment — exactly what coaching clients seek."
+            },
+            {
+                "title": "Digital Agencies",
+                "text": "For agencies focused on digital transformation, this domain conveys innovation, independence, and a forward-thinking philosophy."
+            },
+            {
+                "title": "Startup Brands",
+                "text": "A unique, cross-lingual name that stands out in crowded markets. Perfect for any startup building at the intersection of technology and personal growth."
+            }
+        ]
+    },
+    "contact": {
+        "overline": "The Close",
+        "title": "Ready to Own This Domain?",
+        "subtitle": "Whether you're exploring or ready to commit — let's start the conversation.",
+        "form": {
+            "name_label": "Full Name",
+            "name_placeholder": "John Doe",
+            "email_label": "Email Address",
+            "email_placeholder": "john@company.com",
+            "message_label": "Message",
+            "message_placeholder": "I'm interested in acquiring LiberteDigitale.com...",
+            "submit_idle": "Send Inquiry →",
+            "submit_sending": "Sending...",
+            "submit_success": "Message Sent Successfully ✓",
+            "error": "Something went wrong. Please try again or email directly.",
+            "success_message": "Thank you! We'll be in touch shortly."
+        },
+        "direct_buy": {
+            "title": "Prefer a Direct Transaction?",
+            "text": "Skip the back-and-forth. Use a trusted escrow service for a seamless, secure acquisition.",
+            "button": "Buy on Dynadot.com →",
+            "or": "or"
+        }
+    },
+    "footer": {
+        "rights": "All rights reserved."
+    }
+}
