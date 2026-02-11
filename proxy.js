@@ -37,6 +37,6 @@ export function proxy(request) {
 export const config = {
     matcher: [
         // Skip all internal paths (_next)
-        '/((?!_next|favicon.ico|logo.png|robots.txt).*)',
+        '/((?!_next|favicon.ico|logo.png|robots.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
     ],
 }
