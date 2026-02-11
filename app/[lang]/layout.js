@@ -27,6 +27,26 @@ export async function generateMetadata({ params }) {
     icons: {
       icon: "/favicon-32x32.png",
     },
+    openGraph: {
+      title: dict.hero.title + " | LiberteDigitale.com",
+      description: dict.hero.subtitle,
+      siteName: 'LiberteDigitale.com',
+      images: [
+        {
+          url: '/social-share-image.png',
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: lang,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dict.hero.title + " | LiberteDigitale.com",
+      description: dict.hero.subtitle,
+      images: ['/social-share-image.png'],
+    },
   };
 }
 
