@@ -40,10 +40,13 @@ export default function Contact({ dict }) {
                 }),
             });
 
-            if (response.ok) {
+            const data = await response.json();
+
+            if (response.ok && data.success !== "false") {
                 setStatus("success");
                 setFormData({ name: "", email: "", message: "" });
             } else {
+                console.error("Form submission error:", data);
                 setStatus("error");
             }
         } catch (error) {
