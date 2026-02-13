@@ -1,4 +1,5 @@
 import { Playfair_Display, Inter } from "next/font/google";
+import Script from "next/script";
 import "../globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -61,6 +62,11 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${playfair.variable} ${inter.variable}`}>
       <body>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="95446c71-cb8b-4dcb-8db7-37a13a15152e"
+          strategy="afterInteractive"
+        />
         <Header dict={dict.header} lang={lang} />
         <main>{children}</main>
         <Footer dict={dict.footer} />
