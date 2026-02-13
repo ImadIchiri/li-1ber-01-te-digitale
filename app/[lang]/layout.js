@@ -67,6 +67,20 @@ export default async function RootLayout({ children, params }) {
           data-website-id="95446c71-cb8b-4dcb-8db7-37a13a15152e"
           strategy="afterInteractive"
         />
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-J567Q7W9TL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-J567Q7W9TL');
+          `}
+        </Script>
         <Header dict={dict.header} lang={lang} />
         <main>{children}</main>
         <Footer dict={dict.footer} />
