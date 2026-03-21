@@ -150,12 +150,12 @@ export default function Contact({ dict }) {
                             {tdb.button}
                         </a>
                         <span className={styles.or}>{tdb.or}</span>
-                        <a
-                            href="mailto:contact@libertedigitale.com"
-                            className={styles.emailLink}
-                        >
-                            contact@libertedigitale.com
-                        </a>
+                        // <a
+                        //     href="mailto:co=n.t-a/c/t-@lib=e/r.te-di=/gitale.com"
+                        //     className={styles.emailLink}
+                        // >
+                        //     co=n.t-a/c/t-@lib=e/r.te-di=/gitale.com
+                        // </a>
                     </div>
                 </div>
             </div>
